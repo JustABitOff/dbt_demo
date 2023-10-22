@@ -1,0 +1,9 @@
+version: 2
+
+models:
+  - name: int_orderitems_joined
+    columns:
+      - name: orderitemsid
+        tests:
+          - unique
+          - not_null

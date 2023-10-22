@@ -1,0 +1,35 @@
+version: 2
+
+models:
+  - name: stg_customers
+    columns:
+      - name: customerid
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_orderitems
+    columns:
+      - name: orderitemsid
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_orders
+    columns:
+      - name: orderid
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_products
+    columns:
+      - name: productid
+        tests:
+          - unique
+          - not_null
+
+      - name: price
+        tests:
+          - not_null
+          - assert_value_is_positive_number
