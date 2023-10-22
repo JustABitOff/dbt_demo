@@ -1,0 +1,22 @@
+dbt_demo:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      threads: 8
+      host: localhost
+      port: 5433
+      user: postgres
+      pass: postgres
+      dbname: postgres
+      schema: cameron
+
+    prod:
+      type: postgres
+      threads: 8
+      host: localhost
+      port: 5433
+      user: postgres
+      pass: postgres
+      dbname: production
+      schema: production
