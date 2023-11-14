@@ -2,5 +2,5 @@
 target/
 dbt_packages/
 logs/
-_env_dbt_demo/
+_dbt_demo_env/
 .user.yml
