@@ -1,3 +1,10 @@
+{{
+    config(
+        materialized='incremental',
+        unique_key='orderid'
+    )
+}}
+
 select
   int_orderitems_joined.orderid
   , int_orderitems_joined.customerid
