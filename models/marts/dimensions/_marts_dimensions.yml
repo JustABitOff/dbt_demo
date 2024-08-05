@@ -4,6 +4,6 @@ models:
   - name: dim_customers
     columns:
       - name: customerid
-        tests:
+        data_tests:
           - unique
           - not_null

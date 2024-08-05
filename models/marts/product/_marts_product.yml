@@ -4,23 +4,23 @@ models:
   - name: fct_orderitems
     columns:
       - name: orderitemsid
-        tests:
+        data_tests:
           - unique
           - not_null
 
       - name: price
-        tests:
+        data_tests:
           - not_null
           - assert_value_is_positive_number
 
   - name: fct_orders
     columns:
       - name: orderid
-        tests:
+        data_tests:
           - unique
           - not_null
 
       - name: ordertotal
-        tests:
+        data_tests:
           - not_null
           - assert_value_is_positive_number

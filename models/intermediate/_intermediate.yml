@@ -4,6 +4,6 @@ models:
   - name: int_orderitems_joined
     columns:
       - name: orderitemsid
-        tests:
+        data_tests:
           - unique
           - not_null
