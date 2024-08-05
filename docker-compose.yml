@@ -8,7 +8,13 @@ services:
     ports:
       - 5433:5432
     volumes:
-      - postgres_volume:/var/lib/postgresql/data
+      - ./pg_init:/pg_init
+      - ./pg_init/01_pg_init_tables.sql:/docker-entrypoint-initdb.d/01_pg_init_tables.sql
+      - ./pg_init/02_pg_init_data.sh:/docker-entrypoint-initdb.d/02_pg_init_data.sh
+      - ./pg_init/raw_customers.csv:/data/raw_customers.csv
+      - ./pg_init/raw_orderitems.csv:/data/raw_orderitems.csv
+      - ./pg_init/raw_orders.csv:/data/raw_orders.csv
+      - ./pg_init/raw_products.csv:/data/raw_products.csv
     environment:
       - POSTGRES_PASSWORD=postgres
       - POSTGRES_USER=postgres
