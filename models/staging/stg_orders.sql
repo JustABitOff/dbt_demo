@@ -5,4 +5,4 @@ select
   , orderplacedtimestamp
   , orderstatus
   , updatedat
-from {{ ref('raw_orders') }}
+from {{ source('furniture_store', 'orders') }}

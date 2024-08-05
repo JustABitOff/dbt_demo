@@ -5,4 +5,4 @@ select
   , department
   , createdat
   , updatedat
-from {{ ref('raw_products') }}
+from {{ source('furniture_store', 'products') }}

@@ -9,4 +9,4 @@ select
   , country
   , createdat
   , updatedat
-from {{ ref('raw_customers') }}
+from {{ source('furniture_store', 'customers') }}

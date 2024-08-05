@@ -2,4 +2,4 @@ select
   orderitemsid
   , orderid
   , productid
-from {{ ref('raw_orderitems') }}
+from {{ source('furniture_store', 'orderitems') }}

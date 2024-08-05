@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: furniture_store
+    database: postgres  
+    schema: public  
+    tables:
+      - name: customers
+      - name: orderitems
+      - name: orders
+      - name: products
